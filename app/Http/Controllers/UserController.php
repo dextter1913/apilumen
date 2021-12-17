@@ -16,12 +16,14 @@ class UserController extends Controller
      */
     private $request;
 
-    public function __construct(UserServiceImpl $userService, Request $request) {
+    public function __construct(UserServiceImpl $userService, Request $request)
+    {
         $this->userService = $userService;
         $this->request = $request;
     }
 
-    public function createUser(){
+    public function createUser()
+    {
         $response = response("", 201);
         $this->userService->postUser($this->request->all());
         return $response;
