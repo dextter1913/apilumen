@@ -22,7 +22,7 @@ $router->group(["prefix" => "/v1", "middleware" => "auth"], function () use ($ro
 
         $router->post('/register', 'UserController@createUser');
 
-        // $router->get('/users', 'UserController@index');
+         $router->get('/listar', 'UserController@getListUser');
         // $router->get('/users/{id}', 'UserController@show');
         // $router->put('/users/{id}', 'UserController@update');
         // $router->delete('/users/{id}', 'UserController@destroy');

@@ -97,15 +97,16 @@ $app->routeMiddleware([
 */
 
 // $app->register(App\Providers\AppServiceProvider::class);
-// $app->register(App\Providers\AuthServiceProvider::class);
-// $app->register(App\Providers\EventServiceProvider::class);
+//$app->register(App\Providers\AuthServiceProvider::class);
+//$app->register(App\Providers\EventServiceProvider::class);
+
 $app->register(Flipbox\LumenGenerator\LumenGeneratorServiceProvider::class);
 
 $app->register(Laravel\Passport\PassportServiceProvider::class);
 $app->register(Dusterio\LumenPassport\PassportServiceProvider::class);
 \Dusterio\LumenPassport\LumenPassport::routes($app);
 // token expira 1 hora
-\Dusterio\LumenPassport\LumenPassport::tokensExpireIn(\Carbon\Carbon::now()->addHour(1)); 
+\Dusterio\LumenPassport\LumenPassport::tokensExpireIn(\Carbon\Carbon::now()->addHour(1));
 /*
 |--------------------------------------------------------------------------
 | Load The Application Routes

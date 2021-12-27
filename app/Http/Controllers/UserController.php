@@ -28,4 +28,10 @@ class UserController extends Controller
         $this->userService->postUser($this->request->all());
         return $response;
     }
+
+    public function getListUser(){
+
+        //return response($this->userService->getUser(), 200);
+        return [];
+    }
 }
