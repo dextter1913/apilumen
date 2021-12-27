@@ -17,7 +17,7 @@ $router->get('/', function () use ($router) {
     return $router->app->version();
 });
 
-$router->group(["prefix" => "/v1"], function () use ($router) {
+$router->group(["prefix" => "/v1", "middleware" => "auth"], function () use ($router) {
     $router->group(["prefix" => "/user"], function () use ($router) {
 
         $router->post('/register', 'UserController@createUser');

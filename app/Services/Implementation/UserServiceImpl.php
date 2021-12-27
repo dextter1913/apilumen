@@ -15,6 +15,7 @@ class UserServiceImpl implements IUserServiceInterface
 
     public function getUser()
     {
+        return $this->model->get();
     }
 
     public function getUserById(int $id)
